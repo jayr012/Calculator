@@ -1,24 +1,30 @@
 /* Add a gradient background to the entire page */
 body {
     font-family: Poppins, sans-serif;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 18%;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #1e3c72 65%, #7a5f9e 35%); /* Blue takes up 70%, Violet takes up 30% */
     margin: 0;
+    padding: 0;
     overflow: hidden;
+    background: linear-gradient(to bottom, #1e3c72 57.65%, #7a5f9e 42.35%); /* Blue and violet gradient */
 }
 
-/* Apply a frosted-glass effect with blur to the calculator container */
+/* Main container to hold both the calculator and the right-side text */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-left: 18%; /* Adjust the left padding for positioning */
+}
+
+/* Calculator container styles */
 .calculator {
     background: rgba(255, 255, 255, 0.2); /* semi-transparent white background */
     border-radius: 20px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); /* Apply the blur effect */
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
+    margin-right: 40px; /* Space between calculator and right-side text */
 }
 
 /* Display area (screen) styles */
@@ -37,7 +43,7 @@ body {
     background-color: rgba(255, 255, 255, 0.7); /* Slight white background for the screen */
     box-sizing: border-box;
     color: #333;
-    margin-bottom: 20px; /* Ensure there's space between the screen and the buttons */
+    margin-bottom: 20px; /* Space between screen and buttons */
 }
 
 /* Button grid layout */
@@ -68,4 +74,40 @@ body {
 
 .button:active {
     background-color: #388e3c;
+}
+
+/* Right side text and card styles */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    color: #fff;
+    margin-top: 156px; /* Move the title 50px down */
+    padding-left: 90px; /* Add padding on the left side */
+}
+
+.card {
+    margin-bottom: 110px;
+    margin-left: 100px;
+    background-color: white;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    color: #7a5f9e; /* Violet color for the card text */
+}
+
+.card p {
+    font-size: 1.6em;
+    font-weight: 600;
+    font-family: 'Montserrat'; sans-serif
 }
