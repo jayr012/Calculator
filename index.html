@@ -5,43 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display">
-            <input type="text" id="screen" disabled>
+    <div class="container">
+        <!-- Left Section: Calculator -->
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="screen" disabled>
+            </div>
+            <div class="buttons">
+                <!-- Row 1 -->
+                <button class="button" onclick="clearScreen()">AC</button>
+                <button class="button" onclick="deleteLastCharacter()">DEL</button>
+                <button class="button" onclick="appendToScreen('%')">%</button>
+                <button class="button" onclick="appendToScreen('/')">/</button>
+
+                <!-- Row 2 -->
+                <button class="button" onclick="appendToScreen('7')">7</button>
+                <button class="button" onclick="appendToScreen('8')">8</button>
+                <button class="button" onclick="appendToScreen('9')">9</button>
+                <button class="button" onclick="appendToScreen('*')">*</button>
+
+                <!-- Row 3 -->
+                <button class="button" onclick="appendToScreen('4')">4</button>
+                <button class="button" onclick="appendToScreen('5')">5</button>
+                <button class="button" onclick="appendToScreen('6')">6</button>
+                <button class="button" onclick="appendToScreen('-')">-</button>
+
+                <!-- Row 4 -->
+                <button class="button" onclick="appendToScreen('1')">1</button>
+                <button class="button" onclick="appendToScreen('2')">2</button>
+                <button class="button" onclick="appendToScreen('3')">3</button>
+                <button class="button" onclick="appendToScreen('+')">+</button>
+
+                <!-- Row 5 -->
+                <button class="button" onclick="appendToScreen('0')">0</button>
+                <button class="button" onclick="appendToScreen('00')">00</button>
+                <button class="button" onclick="appendToScreen('.')">.</button>
+                <button class="button" onclick="calculate()">=</button>
+            </div>
         </div>
-        <div class="buttons">
-            <!-- Row 1 -->
-            <button class="button" onclick="clearScreen()">AC</button>
-            <button class="button" onclick="deleteLastCharacter()">DEL</button>
-            <button class="button" onclick="appendToScreen('%')">%</button>
-            <button class="button" onclick="appendToScreen('/')">/</button>
 
-            <!-- Row 2 -->
-            <button class="button" onclick="appendToScreen('7')">7</button>
-            <button class="button" onclick="appendToScreen('8')">8</button>
-            <button class="button" onclick="appendToScreen('9')">9</button>
-            <button class="button" onclick="appendToScreen('*')">*</button>
-
-            <!-- Row 3 -->
-            <button class="button" onclick="appendToScreen('4')">4</button>
-            <button class="button" onclick="appendToScreen('5')">5</button>
-            <button class="button" onclick="appendToScreen('6')">6</button>
-            <button class="button" onclick="appendToScreen('-')">-</button>
-
-            <!-- Row 4 -->
-            <button class="button" onclick="appendToScreen('1')">1</button>
-            <button class="button" onclick="appendToScreen('2')">2</button>
-            <button class="button" onclick="appendToScreen('3')">3</button>
-            <button class="button" onclick="appendToScreen('+')">+</button>
-
-            <!-- Row 5 -->
-            <button class="button" onclick="appendToScreen('0')">0</button>
-            <button class="button" onclick="appendToScreen('00')">00</button>
-            <button class="button" onclick="appendToScreen('.')">.</button>
-            <button class="button" onclick="calculate()">=</button>
+        <!-- Right Section: Text and Card -->
+        <div class="right-side">
+            <div class="title">
+                <p>Calculator</p>
+            </div>
+            <div class="card">
+                <p>HTML, CSS and JavaScript</p>
+            </div>
         </div>
     </div>
 
